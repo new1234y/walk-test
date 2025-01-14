@@ -4,20 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk-Test</title>
-    <link rel="stylesheet" href="style.css">
+    <link>
+    <title>Walk-test</title>
+    <style>
+        .ecran {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video {
+            height: 100vh;
+            background: black;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .description {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            width: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="video-container">
-        <video controls>
-            <source src="Walk-test.mp4" type="video/mp4">
-            Ton navigateur ne supporte pas la lecture vidéo.
-        </video>
+    <div class="container">
+        <div class="ecran">
+            <video controls class="video" muted>
+                <source src="Walk-test.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <div class="description">
+                <p>Vidéo montrant la réalisation d'un walk-test sur le poste avion Québec 21 (Q21).</p>
+            </div>
+        </div>
     </div>
-        <p class="video-description">
-        Vidéo d'une personne faisant un walk test avec une mire de guidage.
-    </p>
+    <script>
+        window.addEventListener('load', function() {
+            const video = document.querySelector('.video');
+            setTimeout(function() {
+                video.play(); // Démarre la vidéo après 3 secondes
+            }, 3000); // 3000 millisecondes = 3 secondes
+        });
+    </script>
 </body>
 
 </html>
