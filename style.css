@@ -15,9 +15,8 @@ body {
 
 .video-container {
     width: 90%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    /* Maintient les proportions de la vidéo */
+    max-width: 400px; /* Pour garder un format vertical */
+    aspect-ratio: 9 / 16; /* Format vertical */
     background: #000;
     border-radius: 8px;
     overflow: hidden;
