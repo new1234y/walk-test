@@ -14,6 +14,7 @@
         }
         
         .video {
+            width: 100vw;
             max-height: 75vh;
             background: black;
             display: block;
@@ -36,18 +37,27 @@
             padding: 0;
             background: black;
         }
+        
+        footer p {
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="ecran">
-            <video controls class="video" loop>
+            <video controls class="video" muted loop>
                 <source src="Walk-test.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
             <div class="description">
                 <p>Vidéo montrant la réalisation d'un walk-test sur le poste avion Québec 21 (Q21).</p>
+                <p>Fait par Mohamed Yassine 3°4</p>
             </div>
         </div>
     </div>
